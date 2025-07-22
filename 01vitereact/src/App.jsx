@@ -1,10 +1,15 @@
+import Test from "./Test";
 
 
 function App() {
 
   return (
-    <h1>React app with vite</h1>
+    <> 
+    <Test/>
+    <h1>Test with React</h1>
+    <p>test para</p>
+    </>
   )
 }
 
-export default App
+export default App;
