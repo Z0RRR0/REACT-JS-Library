@@ -39,57 +39,59 @@ function App() {
 
   return (
     <>
-      <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
-        <h1 className='text-white text-center my-3'>Password generator</h1>
-        <div className='flex shadow rounded-lg overflow-hidden mb-4 bg-gray-700'>
-          <input 
-            type="text" 
-            value={password}
-            className='outline-none w-full py-1 px-3'
-            placeholder='Password'
-            readOnly
-            ref={passwordRef}
-          />
-          <button 
-          onClick={copyPasswordToClipboard}
-          className="cursor-pointer bg-blue-700 hover:bg-blue-800 active:scale-95 transition-all duration-150 text-white px-3 py-0.5 shrink-0"
+      <div className='grid place-content-center h-screen w-screen'>
+        <div className='grid place-content-center w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
+            <h1 className='text-white text-center my-3'>Password generator</h1>
+            <div className='flex shadow rounded-lg overflow-hidden mb-4 bg-gray-700'>
+              <input 
+                type="text" 
+                value={password}
+                className='outline-none w-full py-1 px-3'
+                placeholder='Password'
+                readOnly
+                ref={passwordRef}
+              />
+              <button 
+              onClick={copyPasswordToClipboard}
+              className="cursor-pointer bg-blue-700 hover:bg-blue-800 active:scale-95 transition-all duration-150 text-white px-3 py-0.5 shrink-0"
 
-          >copy</button>
+              >copy</button>
 
-        </div>
-        <div className='flex text-sm gap-x-2'>
-          <div className='flex items-center gap-x-1'>
-            <input 
-            type="range" 
-            min={6}
-            max={32}
-            value={length}
-            className='cursor-pointer'
-            onChange={(e) => {setLength(e.target.value)}}
-            />
-            <label>Length: {length}</label>
+            </div>
+            <div className='flex text-sm gap-x-2'>
+              <div className='flex items-center gap-x-1'>
+                <input 
+                type="range" 
+                min={6}
+                max={32}
+                value={length}
+                className='cursor-pointer'
+                onChange={(e) => {setLength(e.target.value)}}
+                />
+                <label>Length: {length}</label>
+              </div>
+              <div className='flex items-center gap-x-1'>
+                <input type="checkbox"
+                defaultChecked={numberAllowed}
+                id="numberInput"
+                onChange={() => {
+                  setNumberAllowed((prev) => !prev);
+                }}
+                />
+                <label >Numbers</label>
+              </div>
+              <div className='flex items-center gap-x-1'>
+                <input type="checkbox"
+                defaultChecked={characterAllowed}
+                id="characterInput"
+                onChange={() => {
+                  setCharacterAllowed((prev) => !prev);
+                }}
+                />
+                <label >Characters</label>
+              </div>
+            </div>
           </div>
-          <div className='flex items-center gap-x-1'>
-            <input type="checkbox"
-            defaultChecked={numberAllowed}
-            id="numberInput"
-            onChange={() => {
-              setNumberAllowed((prev) => !prev);
-            }}
-            />
-            <label >Numbers</label>
-          </div>
-          <div className='flex items-center gap-x-1'>
-            <input type="checkbox"
-            defaultChecked={characterAllowed}
-            id="characterInput"
-            onChange={() => {
-              setCharacterAllowed((prev) => !prev);
-            }}
-            />
-            <label >Characters</label>
-          </div>
-        </div>
       </div>
     </>
   )
