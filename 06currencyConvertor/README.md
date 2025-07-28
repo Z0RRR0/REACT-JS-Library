@@ -1,12 +1,31 @@
-# React + Vite
+## 💱 React Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a currency converter built using **React**. It allows users to convert between different currencies with live exchange rates using a custom API.
 
-Currently, two official plugins are available:
+### 🧠 Features:
+- Built with **React functional components**
+- Utilized React hooks: `useState`, `useEffect`, and `useId`
+- Created a custom hook: `useCurrencyInfo` to fetch real-time currency data
+- Clean and minimal UI to show:
+  - Initial load state
+  - USD to INR conversion
+  - INR to USD conversion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📸 Screenshots: 
+1. Initial Page Load
+ <img width="1310" height="937" alt="Screenshot 2025-07-27 221602" src="https://github.com/user-attachments/assets/47537cc4-0966-40f7-9ecb-1d189049f546" />
 
-## Expanding the ESLint configuration
+2. USD to INR Conversion
+ <img width="1383" height="955" alt="Screenshot 2025-07-27 221613" src="https://github.com/user-attachments/assets/4b8140b6-2162-47aa-92cf-11b2b761cd42" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. INR to USD Conversion
+ <img width="1392" height="956" alt="Screenshot 2025-07-27 221643" src="https://github.com/user-attachments/assets/e46d997a-fa59-4a9e-a04d-53d748611b30" />
+
+
+### 🙌 Credits:
+Special thanks to **Hitesh Choudhary** for the amazing tutorials and guidance!
+
+---
+
+**Tech Stack:** React, JavaScript, HTML, CSS  
+**Status:** ✅ Completed (Day 6 of 100 Days of Code)
