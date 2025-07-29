@@ -27,7 +27,6 @@ function Layout() {
   return (
     <>
     <Header />
-    {/* <RedirectToHomeOnRefresh /> */}
     <Outlet />
     <Footer />
     </>
