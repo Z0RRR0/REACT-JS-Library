@@ -6,12 +6,12 @@ import {Button, Input, Logo} from './index'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 
-function Singup() {
+function Signup() {
     const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
     const {register, handleSubmit} = useForm()
-
+ // true
     const create = async(data) => {
         setError("")
         try {
@@ -72,7 +72,7 @@ function Singup() {
                         type="password"
                         placeholder="Enter your Password"
                         {...register("password", {
-                            required: trye,})}
+                            required: true,})}
                         />
                         <Button
                         type="submit"
@@ -85,4 +85,4 @@ function Singup() {
   )
 }
 
-export default Singup
+export default Signup

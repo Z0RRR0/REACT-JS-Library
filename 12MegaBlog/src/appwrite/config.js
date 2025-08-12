@@ -35,7 +35,7 @@ export class Service{
 
     async updatePost(slug, {title, content, featuredImage, status}) {
         try {
-            return await this.databases.upsertDocument(
+            return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
@@ -86,10 +86,9 @@ export class Service{
                 conf.appwriteCollectionId,
                 queries,
 
-
             )
         } catch (error) {
-            log("Appwrite service :: getPosts :: error", error);
+            console.log("Appwrite service :: getPosts :: error", error);
             return false;
         }
     }
@@ -126,6 +125,13 @@ export class Service{
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId,
+        )
+    }
+
+    getFileView(fileId) {
+        return this.bucket.getFileView(
+            conf.appwriteBucketId, 
+            fileId
         )
     }
 }
